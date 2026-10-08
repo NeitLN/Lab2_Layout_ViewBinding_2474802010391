@@ -1,0 +1,38 @@
+<resources>
+
+    <string name="app_name">Lab2_Layout_ViewBinding</string>
+
+    <!-- LOGIN -->
+    <string name="logo_desc">VLU logo</string>
+    <string name="login_title">SYSTEM LOGIN</string>
+    <string name="hint_email">Email address</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_login">LOG IN</string>
+
+    <string name="msg_missing_info">Please enter email and password</string>
+    <string name="status_missing">Status: Please fill in all fields</string>
+    <string name="err_email_invalid">Invalid email</string>
+    <string name="err_password_short">Password must be at least 6 characters</string>
+    <string name="status_login_ok">Login successful: %1$s</string>
+
+    <string name="forgot_password">Forgot password?</string>
+    <string name="forgot_password_message">Forgot password feature</string>
+
+    <!-- PROFILE -->
+    <string name="avatar_desc">Avatar</string>
+    <string name="profile_name">Võ Việt Tiến</string>
+    <string name="profile_role">Information Technology Student</string>
+
+    <string name="label_email">Email</string>
+    <string name="label_mssv">Student ID</string>
+    <string name="label_class">Class</string>
+
+    <string name="value_mssv">2474802010391</string>
+    <string name="value_class">72K30CNTT01</string>
+    <string name="empty_value">-</string>
+
+    <string name="btn_edit">Edit</string>
+    <string name="btn_logout">Log out</string>
+    <string name="profile_edit_message">Edit profile feature</string>
+
+</resources>
