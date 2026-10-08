@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- ScrollView: không bị cắt khi xoay ngang / bàn phím hiện lên -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="24dp">
+
+    <!-- Avatar tròn -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/avatar_desc"
+        android:scaleType="centerCrop"
+        android:src="@drawable/avatar_tien"
+        app:shapeAppearanceOverlay="@style/CircleImage"
+        app:strokeColor="#E0E0E0"
+        app:strokeWidth="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Họ tên -->
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/profile_name"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgAvatar" />
+
+    <!-- Vai trò -->
+    <TextView
+        android:id="@+id/tvRole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/profile_role"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <!-- Email -->
+    <TextView
+        android:id="@+id/tvLabelEmail"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/label_email"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvRole" />
+
+    <TextView
+        android:id="@+id/tvValueEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/empty_value"
+        android:textColor="?android:attr/textColorSecondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvLabelEmail"
+        app:layout_constraintTop_toTopOf="@id/tvLabelEmail" />
+
+    <!-- MSSV -->
+    <TextView
+        android:id="@+id/tvLabelMssv"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="@string/label_mssv"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelEmail" />
+
+    <TextView
+        android:id="@+id/tvValueMssv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/value_mssv"
+        android:textColor="?android:attr/textColorSecondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvLabelMssv"
+        app:layout_constraintTop_toTopOf="@id/tvLabelMssv" />
+
+    <!-- Lớp -->
+    <TextView
+        android:id="@+id/tvLabelClass"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="@string/label_class"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelMssv" />
+
+    <TextView
+        android:id="@+id/tvValueClass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/value_class"
+        android:textColor="?android:attr/textColorSecondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvLabelClass"
+        app:layout_constraintTop_toTopOf="@id/tvLabelClass" />
+
+    <!-- Chỉnh sửa -->
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/btn_edit"
+        app:layout_constraintEnd_toStartOf="@id/btnLogout"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelClass" />
+
+    <!-- Đăng xuất -->
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/btn_logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/btnEdit"
+        app:layout_constraintTop_toTopOf="@id/btnEdit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
