@@ -38,6 +38,10 @@
 |-----------|-------|------------------|
 | ![Login](screenshots/login.png) | ![Profile](screenshots/profile.png) | ![Layout Inspector](screenshots/layout_inspector.png) |
 
+**Xoay ngang:** nhờ `ScrollView`, nút ĐĂNG NHẬP vẫn cuộn tới được.
+
+![Login xoay ngang](screenshots/login_landscape.png)
+
 ## Cách chạy
 
 1. Clone repo và mở bằng Android Studio.
